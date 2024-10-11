@@ -1,5 +1,5 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
+import { IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonContent, IonFooter, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { ListCenter } from '../components/listCenter/ListCenter';
 import './Home.css';
 
 const Home: React.FC = () => {
@@ -7,17 +7,28 @@ const Home: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Blank</IonTitle>
+          <IonTitle style={{'fontSize':'clamp(1.1rem, 2vw, 2rem)'}}>SEDE HOSPITALARIA AXA COLPATRIA</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">Blank</IonTitle>
+            <IonTitle style={{'fontSize':'clamp(1.1rem, 2vw, 2rem)'}}>SEDE HOSPITALARIA AXA COLPATRIA</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer />
+        <ListCenter/>
       </IonContent>
+      <IonFooter>
+        <IonToolbar>
+          <IonCard color="danger">
+            <IonCardHeader>
+              <IonCardSubtitle style={{fontSize:'12px', color:'#ffcbcb'}}>Primer Respondiente (3016404867)</IonCardSubtitle>
+              <IonCardSubtitle style={{fontSize:'12px', color:'#ffcbcb'}}>Líder PESV (3016404867)</IonCardSubtitle>
+              <IonCardSubtitle style={{fontSize:'12px', color:'#ffcbcb'}}>Lider SST (3016404867)</IonCardSubtitle>
+            </IonCardHeader>
+          </IonCard>
+        </IonToolbar>
+      </IonFooter>
     </IonPage>
   );
 };
